@@ -20,6 +20,13 @@ function Todo() {
       setValue(null);
     }
   };
+  var handDeleteTodo = (id) => {
+    setTodos(
+      todos.filter((todo) => {
+        if (todo.key !== id) return true;
+      })
+    );
+  };
 
   return (
     <View className="items-center">
@@ -42,7 +49,11 @@ function Todo() {
 
       <ScrollView style={{ width: "100%" }}>
         {todos.map((task) => (
-          <Item text={task.text} key={task.key} />
+          <Item
+            text={task.text}
+            key={task.key}
+            delete={() => handDeleteTodo(task.key)}
+          />
         ))}
       </ScrollView>
     </View>
