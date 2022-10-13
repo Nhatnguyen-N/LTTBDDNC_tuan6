@@ -37,7 +37,7 @@ function Todo() {
           multiline={true}
           onChangeText={(value) => setValue(value)}
           value={value}
-          className="border w-[200px] h-10 p-[15px] "
+          className="border w-[200px] h-10 p-[5px] "
         />
         <TouchableOpacity
           className="border-2 p-2 ml-5 rounded-lg"
